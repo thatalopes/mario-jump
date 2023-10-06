@@ -5,12 +5,13 @@
 }
 
 .game-board {
-    width: 80%;
+    width: 100%;
     height: 500px;
-    border: 1px solid black;
+    border: 15px solid rgb(35, 160, 35);
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(#87CEEB, 3E0F6FF);
 }
 
 .pipe {
@@ -28,6 +29,12 @@
 
 .jump {
     animation: mario-jump 500ms ease-out;
+}
+
+.nuvem {
+    position: absolute;
+    width: 550px;
+    animation: nuvem-animation 10s infinite linear;
 }
 
 @keyframes pipe-animation {
@@ -54,5 +61,14 @@
     }
     100% {
         bottom: 0;
+    }
+}
+
+@keyframes nuvem-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        left: 100%;
     }
 }
